@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.private.json
+.env
+.env.*
+!.env.example
+build-event-companion/.tmp/
+build-event-companion/dist/

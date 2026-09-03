@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Decorative sample QR placeholder</title>
+  <desc id="desc">A non-scannable black and white grid marked as a sample.</desc>
+  <rect width="600" height="600" fill="#fff"/>
+  <g fill="#101010">
+    <path d="M48 48h156v156H48zm36 36v84h84V84zM396 48h156v156H396zm36 36v84h84V84zM48 396h156v156H48zm36 36v84h84v-84z"/>
+    <path d="M252 48h48v48h-48zm72 0h24v72h-24zm-72 96h72v24h-72zm24 48h48v48h-48zm72-48h24v96h-24zM228 276h48v48h-48zm72-24h24v72h-24zm48 24h72v24h-72zm96-48h48v48h-48zm72 24h36v72h-36zM228 348h24v72h-24zm48 0h72v24h-72zm96-24h48v72h-48zm72 0h24v48h-24zm48 48h60v24h-60zM252 444h48v48h-48zm72-48h24v96h-24zm48 24h72v24h-72zm96 24h84v48h-84zm-216 72h72v36h-72zm120-48h48v84h-48z"/>
+  </g>
+  <rect x="196" y="258" width="208" height="84" rx="12" fill="#f6d32d" stroke="#101010" stroke-width="8"/>
+  <text x="300" y="312" text-anchor="middle" fill="#101010" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="900">SAMPLE</text>
+</svg>

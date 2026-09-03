@@ -1,0 +1,55 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: build-event-companion/package-lock.json
+      - name: Audit public repository privacy
+        run: node scripts/audit-public-repo.mjs
+      - name: Install skill dependencies
+        run: npm ci
+        working-directory: build-event-companion
+      - name: Run unit tests
+        run: npm test
+        working-directory: build-event-companion
+      - name: Validate fictional sample
+        run: npm run validate:sample
+        working-directory: build-event-companion
+      - name: Generate fictional sample site
+        run: npm run build:sample
+        working-directory: build-event-companion
+      - name: Install generated site
+        run: npm install
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Build generated site
+        run: npm run build
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Audit generated-site dependencies
+        run: npm audit
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Audit projector layouts
+        run: npm run audit:layout
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Test paired phone remote
+        run: npm run test:remote
+        working-directory: build-event-companion/.tmp/sample-site
+      - name: Audit dependencies
+        run: npm audit --omit=dev
+        working-directory: build-event-companion
