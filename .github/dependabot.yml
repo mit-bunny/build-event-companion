@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /build-event-companion
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /build-event-companion/assets/site-template
+    schedule:
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

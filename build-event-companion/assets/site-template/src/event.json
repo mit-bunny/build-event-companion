@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "event": {
+    "id": "sample-creative-salon",
+    "title": "Creative Systems Salon",
+    "subtitle": "People, practices, and possibilities",
+    "start": "2026-10-15T18:00:00-07:00",
+    "end": "2026-10-15T21:00:00-07:00",
+    "timezone": "America/Los_Angeles",
+    "location": "Example City, CA",
+    "description": "A fictional gathering for creators and builders."
+  },
+  "theme": {
+    "background": "#f4f0e8",
+    "ink": "#101010",
+    "accent": "#00a8d6",
+    "secondary": "#ff6b4a"
+  },
+  "attendees": [
+    {
+      "id": "alex-rivera",
+      "name": "Alex Rivera",
+      "role": "host",
+      "bio": "Designing tools for creative teams.",
+      "photo": "",
+      "links": [
+        {
+          "platform": "Website",
+          "url": "https://example.invalid/alex"
+        }
+      ]
+    },
+    {
+      "id": "jordan-lee",
+      "name": "Jordan Lee",
+      "role": "host",
+      "bio": "Building communities for independent creators.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "mei-chen",
+      "name": "Mei Chen",
+      "role": "attendee",
+      "bio": "Researcher, writer, and community builder.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "sam-okafor",
+      "name": "Sam Okafor",
+      "role": "attendee",
+      "bio": "Building human-centered AI products.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "taylor-morgan",
+      "name": "Taylor Morgan",
+      "role": "attendee",
+      "bio": "Prototyping collaborative design systems.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "priya-shah",
+      "name": "Priya Shah",
+      "role": "attendee",
+      "bio": "Exploring new tools for local communities.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "noah-williams",
+      "name": "Noah Williams",
+      "role": "attendee",
+      "bio": "Making personal knowledge easier to use.",
+      "photo": "",
+      "links": []
+    },
+    {
+      "id": "casey-kim",
+      "name": "Casey Kim",
+      "role": "attendee",
+      "bio": "Developing playful learning experiences.",
+      "photo": "",
+      "links": []
+    }
+  ],
+  "topics": [
+    {
+      "id": "creative-ai",
+      "title": "Creative AI",
+      "description": "How creators are making AI part of a real practice rather than a novelty.",
+      "people": 5,
+      "keywords": [
+        "workflows",
+        "taste",
+        "tools"
+      ],
+      "threads": [
+        "Where does judgment matter most?",
+        "Which workflows are worth sharing?"
+      ]
+    },
+    {
+      "id": "community-tools",
+      "title": "Community Tools",
+      "description": "Small, useful systems that help groups learn and build together.",
+      "people": 3,
+      "keywords": [
+        "community",
+        "learning",
+        "coordination"
+      ],
+      "threads": [
+        "What should stay lightweight?",
+        "How can tools strengthen real relationships?"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "welcome",
+      "type": "welcome",
+      "label": "Welcome",
+      "enabled": true,
+      "order": 1,
+      "content": {
+        "headline": "Welcome, builders!",
+        "message": "Show what you made, meet someone new, and leave with one idea worth building.",
+        "poster": "/sample-poster.svg",
+        "posterAlt": "Creative Systems Salon sample poster",
+        "qr": "/sample-qr.svg",
+        "qrAlt": "Decorative sample QR placeholder",
+        "qrLabel": "Sample join code",
+        "stats": [
+          {
+            "value": "5 min",
+            "label": "Demo"
+          },
+          {
+            "value": "3 min",
+            "label": "Questions"
+          },
+          {
+            "value": "8",
+            "label": "Guests"
+          }
+        ]
+      }
+    },
+    {
+      "id": "room",
+      "type": "room",
+      "label": "Who's in the room?",
+      "enabled": true,
+      "order": 2,
+      "content": {
+        "total": 8,
+        "categories": [
+          {
+            "label": "Builders",
+            "count": 3,
+            "color": "#00a8d6",
+            "members": [
+              "Alex Rivera",
+              "Sam Okafor",
+              "Taylor Morgan"
+            ]
+          },
+          {
+            "label": "Community",
+            "count": 2,
+            "color": "#ff6b4a",
+            "members": [
+              "Jordan Lee",
+              "Priya Shah"
+            ]
+          },
+          {
+            "label": "Researchers",
+            "count": 2,
+            "color": "#f6d32d",
+            "members": [
+              "Mei Chen",
+              "Noah Williams"
+            ]
+          },
+          {
+            "label": "Students",
+            "count": 1,
+            "color": "#a7e8da",
+            "members": [
+              "Casey Kim"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lineup",
+      "type": "lineup",
+      "label": "Presenter lineup",
+      "enabled": true,
+      "order": 3,
+      "content": {
+        "hosts": [
+          {
+            "id": "alex-rivera",
+            "name": "Alex Rivera",
+            "host": true,
+            "projectName": "Alex's Demo",
+            "projectUrl": "",
+            "description": "A lightweight tool for creative planning."
+          },
+          {
+            "id": "jordan-lee",
+            "name": "Jordan Lee",
+            "host": true,
+            "projectName": "Jordan's Demo",
+            "projectUrl": "",
+            "description": "A community workspace for small groups."
+          }
+        ],
+        "presenters": [
+          {
+            "id": "mei-chen",
+            "name": "Mei Chen",
+            "projectName": "Field Notes",
+            "projectUrl": "https://example.invalid/field-notes",
+            "description": "A structured research notebook for collaborative teams."
+          },
+          {
+            "id": "sam-okafor",
+            "name": "Sam Okafor",
+            "projectName": "Clear Path",
+            "projectUrl": "",
+            "description": "A simple way to turn complex goals into useful next steps."
+          },
+          {
+            "id": "taylor-morgan",
+            "name": "Taylor Morgan",
+            "projectName": "Pattern Kit",
+            "projectUrl": "",
+            "description": "Reusable interface patterns for fast prototypes."
+          },
+          {
+            "id": "priya-shah",
+            "name": "Priya Shah",
+            "projectName": "Neighbor Map",
+            "projectUrl": "",
+            "description": "A local guide built by and for neighborhood communities."
+          },
+          {
+            "id": "casey-kim",
+            "name": "Casey Kim",
+            "projectName": "Casey's Demo",
+            "projectUrl": "",
+            "description": "A playful learning experiment built during the week."
+          }
+        ]
+      }
+    },
+    {
+      "id": "timer",
+      "type": "timer",
+      "label": "Presentation timer",
+      "enabled": true,
+      "order": 4,
+      "settings": {
+        "segments": [
+          {
+            "label": "Demo",
+            "seconds": 300
+          },
+          {
+            "label": "Questions",
+            "seconds": 180
+          }
+        ]
+      }
+    },
+    {
+      "id": "prep",
+      "type": "directory",
+      "label": "Attendees",
+      "enabled": true,
+      "order": 5
+    },
+    {
+      "id": "intro",
+      "type": "intro",
+      "label": "Intro roulette",
+      "enabled": true,
+      "order": 6
+    },
+    {
+      "id": "discussion",
+      "type": "discussion",
+      "label": "Discussion themes",
+      "enabled": true,
+      "order": 7
+    },
+    {
+      "id": "arrival",
+      "type": "info",
+      "label": "Arrival",
+      "enabled": true,
+      "order": 8,
+      "content": {
+        "cards": [
+          {
+            "title": "Finding the room",
+            "body": "Follow the event signs after entering the sample venue."
+          }
+        ]
+      }
+    }
+  ],
+  "remoteControl": {
+    "enabled": true,
+    "provider": "supabase-broadcast",
+    "codeLength": 6,
+    "controls": [
+      "navigation",
+      "lineup-shuffle",
+      "timer"
+    ]
+  }
+}

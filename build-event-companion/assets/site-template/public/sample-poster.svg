@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Systems Salon sample poster</title>
+  <desc id="desc">A fictional event poster made from colorful geometric shapes.</desc>
+  <rect width="720" height="960" fill="#c8b7ff"/>
+  <circle cx="610" cy="120" r="180" fill="#f6d32d"/>
+  <rect x="-80" y="650" width="460" height="410" rx="205" fill="#00a8d6"/>
+  <path d="M420 520 720 370v590H420z" fill="#ff7658"/>
+  <g fill="#101010" font-family="Arial, Helvetica, sans-serif">
+    <text x="58" y="82" font-size="24" font-weight="700" letter-spacing="5">FICTIONAL SAMPLE EVENT</text>
+    <text x="58" y="285" font-size="98" font-weight="900">Creative</text>
+    <text x="58" y="385" font-size="98" font-weight="900">Systems</text>
+    <text x="58" y="485" font-size="98" font-weight="900">Salon</text>
+    <text x="58" y="570" font-size="30" font-weight="700">People, practices, and possibilities</text>
+    <text x="58" y="890" font-size="25" font-weight="700">OCTOBER 15 · EXAMPLE CITY</text>
+  </g>
+</svg>

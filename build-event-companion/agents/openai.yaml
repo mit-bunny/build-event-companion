@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Event Companion"
+  short_description: "Turn event registrations into modular event sites"
+  default_prompt: "Use $build-event-companion to create a modular event website from my registration data."

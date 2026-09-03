@@ -1,0 +1,38 @@
+name: Release skill bundle
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+      - name: Verify version and privacy
+        run: |
+          EXPECTED="v$(node -p "require('./build-event-companion/package.json').version")"
+          test "$GITHUB_REF_NAME" = "$EXPECTED"
+          node scripts/audit-public-repo.mjs
+      - name: Create installable archive and checksum
+        run: |
+          ARCHIVE="build-event-companion-${GITHUB_REF_NAME}.zip"
+          zip -rq "$ARCHIVE" build-event-companion \
+            -x "build-event-companion/node_modules/*" \
+               "build-event-companion/.tmp/*" \
+               "build-event-companion/dist/*" \
+               "build-event-companion/.DS_Store"
+          shasum -a 256 "$ARCHIVE" > "$ARCHIVE.sha256"
+      - name: Publish release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ARCHIVE="build-event-companion-${GITHUB_REF_NAME}.zip"
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" --generate-notes --title "$GITHUB_REF_NAME"
+          gh release upload "$GITHUB_REF_NAME" "$ARCHIVE" "$ARCHIVE.sha256" --clobber
