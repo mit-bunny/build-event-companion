@@ -10,6 +10,6 @@
     "build:sample": "node scripts/build-event-site.mjs --event examples/sample-event.json --output .tmp/sample-site"
   },
   "optionalDependencies": {
-    "read-excel-file": "^6.0.1"
+    "read-excel-file": "^9.3.10"
   }
 }
